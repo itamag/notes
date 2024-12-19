@@ -1,9 +1,9 @@
 # Working Out the Action
 >[!thm] The Action of the EM field
 >$$
->\begin{align}
+>\begin{aligned}
  S  & = S_{\text{matter}} + S_{\text{int}} + S_{\text{field}} \\
-\end{align}
+\end{aligned}
 >$$
 >$$
 >S_{\text{matter}} = -\sum_{i}m_{i}c\int ds_{i}
@@ -61,10 +61,10 @@ The LHS is a product of antisymmetric and symmetric tensors and so it's zero due
 # Summary
 
 > [!thm] Lagrangian density of relativistic EM field
->$$\begin{align}
+>$$\begin{aligned}
  {\mathcal{L}}&={\mathcal{L}}_{m a t t e r}-{\frac{1}{c}}A_{\mu}J^{\mu}-{\frac{1}{16\pi}}F^{\mu\nu}F_{\mu\nu} \\
  & = {\mathcal{L}}_{m a t t e r}  - \left( \rho - \frac{1}{c}\mathbf{J}\cdot \mathbf{A} \right)- \frac{1}{8\pi}(E^2 - B^2)
-\end{align}$$
+\end{aligned}$$
 >[[The Electromagnetic Field Tensor]]
 
 ^d5e94f
@@ -74,10 +74,10 @@ The LHS is a product of antisymmetric and symmetric tensors and so it's zero due
 
 
 > [!thm] Hamiltonian density of the relativistic EM field
-> $$\begin{align}
+> $$\begin{aligned}
 > {\mathcal{H}} & =\frac{\partial{\mathcal{L}}}{\partial\left(\partial_{0}A_{\mu}\right)}\partial_{0}A_{\mu}-{\mathcal{L}} \\
 >  & ={\frac{1}{8\pi}}\left(E^{2}+B^{2}\right)\;\;\;\;\;-{\frac{1}{c}}{\boldsymbol{J}}\cdot{\boldsymbol{A}}\;\;\;\;+\;\;\;{\frac{1}{4\pi}}{\boldsymbol{\nabla}}\cdot\left[\varphi{\boldsymbol{E}}\right]
-> \end{align}$$
+> \end{aligned}$$
 > The last term will cancel out when integrating the density due to [[Tensor Analysis#^fd1ddd]] 
 
 ^93d106

@@ -8,29 +8,29 @@ We can go further: for each point $\mathbf{r'}$ of the charge distribution, appr
 
 >[!thm] Multipole Expansion
 >$$
-\begin{align}
+\begin{aligned}
 \frac{1}{|\mathbf{r'}-\mathbf{r|}}  = \frac{1}{r}\sum_{n=0}^\infty P_{n}(\mathbf{r}\cdot \mathbf{r'})\left( \frac{r'}{r} \right)^n
-\end{align}$$
+\end{aligned}$$
 
 ^641d24
 
 >[!Proof]-
 > `\begin{proof}`
-> $$\begin{align}
+> $$\begin{aligned}
 > \frac{1}{|\mathbf{r'}-\mathbf{r|}}  & = \frac{1}{\sqrt{ {r^2 + (r')^2 - 2\mathbf{r}\cdot \mathbf{r'}} }} = \frac{1}{r} \cdot \frac{1}{\sqrt{ 1+\left( \frac{r'}{r} \right)^2 - 2\left( \frac{r'}{r} \right)\;\mathbf{\hat{r}}\cdot \mathbf{\hat{r}} }} \\
 >  & ={\frac{1}{r}}\left\{1+{\frac{r^{\prime}}{r}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)+\left({\frac{r^{\prime}}{r}}\right)^{2}\left[{\frac{3}{2}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)-{\frac{1}{2}}\right]+\left({\frac{r^{\prime}}{r}}\right)^{3}\left[{\frac{5}{2}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)^{3}-{\frac{3}{2}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)\right]+\ldots\right\} \\
 >  & \frac={1}{r}\sum_{n=0}^\infty P_{n}(\mathbf{r}\cdot \mathbf{r'})\left( \frac{r'}{r} \right)^n
-> \end{align}$$
+> \end{aligned}$$
 > 
 > `\end{proof}`
 
 This approximation can be applied when calculating either magnetic or electric fields in [[Maxwell Equations#Superposition Problems for Static Maxwell]].
 
 >[!thm] Multiple Expansion of Electric Field
->$$\begin{align} \\
+>$$\begin{aligned} \\
 \varphi\left({\boldsymbol{r}}\right) & =\sum_{n=0}^{\infty}{\frac{1}{r^{n+1}}}\int\left({\boldsymbol{r}}^{\prime}\right)^{n}P_{n}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)\rho\left({\boldsymbol{r}}^{\prime}\right)d^{3}r^{\prime} \\
  & ={\frac{1}{r}}{\int}\rho\left({\boldsymbol{r}}^{\prime}\right)d^{3}r^{\prime}+{\frac{1}{r^{2}}}\int r^{\prime}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)\rho\left({\boldsymbol{r}}^{\prime}\right)d^{3}r^{\prime}+{\frac{1}{r^{3}}}\int\left({\boldsymbol{r}}^{\prime}\right)^{2}\left[{\frac{3}{2}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)^{2}-{\frac{1}{2}}\right]\rho\left({\boldsymbol{r}}^{\prime}\right)d^{3}r^{\prime}+\ldots
-\end{align}$$
+\end{aligned}$$
 ^facfa1
 
 >[!remark] The role of the multipole moment in multipole expansion
