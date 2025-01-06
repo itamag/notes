@@ -31,6 +31,7 @@
 >[!claim] If an r.v. has MGF, then the PDF decays exponentially (iff TBD)
 >$P(X \geq t) = P(e^{sX} \geq e^{st}) \leq [Markov] \leq \inf_{s} \frac{E[e^{sX}]}{e^{st}} = \inf_{s} M_{X}(s)\cdot e^{-st}$
 
+
 >[!theorem] Law of Large Numbers
 ![[Pasted image 20241111184519.png]]
 
@@ -41,7 +42,7 @@
 
 We start with the [[#^96ffaf]]. We then expand to functions of r.v.s using [[#^2e5daa]]. Then, we tackle the question of rate of convergence  (which is unanswered by CLT) using [[#^6f71aa]] and the further assumption that the third moment exists. We see that the maximal distance between the sample mean CDF and the normal distribution is  $\sim \frac{1}{\sqrt{ n }}$ , which is far from ideal. Then, using [[Hoeffding's Theorem#^a16f48]]  and applying it to a CLT case [[Hoeffding's Theorem#^da7be3]]  , we get a much tighter bound, however with the condition that our r.v.s are bounded. Further we get stuck with the same caveat: for a fixed error interval $t$, we get exponential convergence, but if we'd like the error $t$ to diminish as we take more samples $n$, $t$ can only diminish as $\sim \frac{1}{\sqrt{ n }}$.
 
-### Central Limit Theorem %% fold %%
+### Central Limit Theorem
 
 > [!theorem] Central Limit Theorem
 > $${\sqrt{n}}\left({\bar{X}}_{n}-\mu\right)\;{\xrightarrow{d}}\;{\mathcal{N}}\left(0,\sigma^{2}\right)$$
@@ -95,7 +96,7 @@ For $\tilde{\mu}_{n} \in (x_{n}, \mu)$. We know $X_{n} \xrightarrow{P}\mu$ and s
 ^6f71aa
 
 ^2ffb59
-### Monte Carlo Integration %% fold %%
+### Monte Carlo Integration
 
 >[!corollary] Monte Carlo Integration
 >An integral of a function over a domain is the average or "expectation" of the function times the domain volume. So if we let $f(x)$, and denote $X \sim U(D)$, then:

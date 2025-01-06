@@ -71,10 +71,10 @@ Minkowski spacetime, developed by Hermann Minkowski, is the mathematical framewo
 The geometry of Minkowski spacetime is defined by the **metric tensor**:  
 
 $$  
-\begin{aligned}
+\begin{align}
  & ds^2 = c^2 dt^2 - d^2r \\
  & d \tau^2 = 1 - \left( \frac{v}{c} \right)^2
-\end{aligned}
+\end{align}
 $$  
 
 where \( ds^2 \) is the **spacetime interval**, a Lorentz scalar invariant under Lorentz transformations. The interval classifies events as:  

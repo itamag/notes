@@ -1,3 +1,7 @@
+>[!note] Recording Links
+>https://tau.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%22c6751073-ffb3-4970-986e-b1b000f7d7fa%22
+
+
 # Week 1
 
 - בקלאסית 2, בנינו את התאוריה לפי: אמפיריקה -> משוואות דינמיות -> משוואות מקסוול
@@ -82,12 +86,22 @@
 		- [[Hamilton's Principle for the EM Field#^93d106]] 
 		- [[Hamilton's Principle for the EM Field#^d5e94f]] 
 	- $${\cal F}_{\mathrm{mag}}=\frac{I}{c}\int d{\boldsymbol{l}}\times{\boldsymbol{B}}=\frac{1}{c}\int{\boldsymbol{J}}\left({\boldsymbol{r}}\right)\times{\boldsymbol{B}}\left({\boldsymbol{r}}\right)d^{3}{\boldsymbol{r}}$$ 
-# Week 6 - Multipole Expansion
+# Week 5 - Multipole Expansion
 - [[Multipole Expansion]]
 	- [[Multipole Expansion#^facfa1]] 
 	- And more
 - [[Electrostatic Energy#Under external field]]
+- ![[Spherical Harmonics#^a38af4]] 
+- 
 
+# Week 6
+- [[Poisson Equation#Formal Solution to Poisson Eq. Using Green's Function]]
+- [[Conducting Metals]]
+- [[Maxwell Equations#Boundary Condition Problems]]
+- [[Method of Image Charges]]
+- [[Charge Particle with Grounded Conducting Sphere]]
+- [[Maxwell Equations#Solution to Static Maxwell's Equations for a Spherical Boundary]]
+- 
 ## Rec 1
 ### Tensors, Differential Geometry
 

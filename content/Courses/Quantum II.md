@@ -6,7 +6,10 @@
 
 # Week 3
 [[Symmetries in Quantum Mechanics]]
-[[Euler Rotations#In Quantum Mechanics]]
+[[The QM Rotation Operator#Introduction]]
 [[Lie Group Theory]]
 
+# Week 6
+[[Tensor Operators (Quantum Mechanics)]]
 
+# Week 8

@@ -1,6 +1,21 @@
+# Leftovers:
+
+- $\bar{M}_{lm}$ signify inner multipole moments
+- Due to [[Spherical Harmonics#^f07ea6]] , if a charge distribution has spherical symmetry, then all spherical moments but the monopole moment vanish. 
+	- Formal approach to spherical symmetry - $\rho(\mathbf{r}) = \rho(r)$
+- 
 # Quick Summary
 “תרגול 6” ([pdf](zotero://open-pdf/library/items/6LMJTUM7?page=1&annotation=N6KZHTBK))
-# Premise
+
+We'd like to have a series expansion of $\frac{1}{\lvert \mathbf{r}-\mathbf{r'} \rvert}$, which we'll use to calculate potentials, fields etc. We can use Taylor expansion, which will give a vector polynomial approximation, or the Laplace expansion, which will effectively describe our quantity over the $Y_{lm}$ basis of [[Spherical Harmonics]].
+
+![[#^2d6d4e]] 
+
+![[#^db1372]]
+
+![[#^52a7e6]]
+
+#  Premise
 Main idea: far from a charge distribution, the electric field will approximately seem like that of a point charge $$\psi \approx \frac{Q}{r}$$
 Let's be exact. In the above example, for each point $\mathbf{r'}$ of the charge distribution, we approximated $\frac{1}{|\mathbf{r'} - \mathbf{r}|} \approx \frac{1}{|\mathbf{r}|}$, i.e. the distribution is approximately a point charge at the axis origin. 
 
@@ -8,29 +23,29 @@ We can go further: for each point $\mathbf{r'}$ of the charge distribution, appr
 
 >[!thm] Multipole Expansion
 >$$
-\begin{aligned}
+\begin{align}
 \frac{1}{|\mathbf{r'}-\mathbf{r|}}  = \frac{1}{r}\sum_{n=0}^\infty P_{n}(\mathbf{r}\cdot \mathbf{r'})\left( \frac{r'}{r} \right)^n
-\end{aligned}$$
+\end{align}$$
 
 ^641d24
 
 >[!Proof]-
 > `\begin{proof}`
-> $$\begin{aligned}
+> $$\begin{align}
 > \frac{1}{|\mathbf{r'}-\mathbf{r|}}  & = \frac{1}{\sqrt{ {r^2 + (r')^2 - 2\mathbf{r}\cdot \mathbf{r'}} }} = \frac{1}{r} \cdot \frac{1}{\sqrt{ 1+\left( \frac{r'}{r} \right)^2 - 2\left( \frac{r'}{r} \right)\;\mathbf{\hat{r}}\cdot \mathbf{\hat{r}} }} \\
 >  & ={\frac{1}{r}}\left\{1+{\frac{r^{\prime}}{r}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)+\left({\frac{r^{\prime}}{r}}\right)^{2}\left[{\frac{3}{2}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)-{\frac{1}{2}}\right]+\left({\frac{r^{\prime}}{r}}\right)^{3}\left[{\frac{5}{2}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)^{3}-{\frac{3}{2}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)\right]+\ldots\right\} \\
 >  & \frac={1}{r}\sum_{n=0}^\infty P_{n}(\mathbf{r}\cdot \mathbf{r'})\left( \frac{r'}{r} \right)^n
-> \end{aligned}$$
+> \end{align}$$
 > 
 > `\end{proof}`
 
 This approximation can be applied when calculating either magnetic or electric fields in [[Maxwell Equations#Superposition Problems for Static Maxwell]].
 
 >[!thm] Multiple Expansion of Electric Field
->$$\begin{aligned} \\
+>$$\begin{align} \\
 \varphi\left({\boldsymbol{r}}\right) & =\sum_{n=0}^{\infty}{\frac{1}{r^{n+1}}}\int\left({\boldsymbol{r}}^{\prime}\right)^{n}P_{n}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)\rho\left({\boldsymbol{r}}^{\prime}\right)d^{3}r^{\prime} \\
  & ={\frac{1}{r}}{\int}\rho\left({\boldsymbol{r}}^{\prime}\right)d^{3}r^{\prime}+{\frac{1}{r^{2}}}\int r^{\prime}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)\rho\left({\boldsymbol{r}}^{\prime}\right)d^{3}r^{\prime}+{\frac{1}{r^{3}}}\int\left({\boldsymbol{r}}^{\prime}\right)^{2}\left[{\frac{3}{2}}\left({\hat{\boldsymbol{r}}}\cdot{\hat{\boldsymbol{r}}}^{\prime}\right)^{2}-{\frac{1}{2}}\right]\rho\left({\boldsymbol{r}}^{\prime}\right)d^{3}r^{\prime}+\ldots
-\end{aligned}$$
+\end{align}$$
 ^facfa1
 
 >[!remark] The role of the multipole moment in multipole expansion
@@ -47,14 +62,39 @@ This approximation can be applied when calculating either magnetic or electric f
 The Taylor series in [[#^641d24]]  is not everywhere convergent. We can have two series for two zones: $r'<r$ and $r' > r$. Physically, we may be very far from a charge, or inside a very large charge. In each series, we'll build the power series s.t the bigger one will be in the denominator (so that the $\frac{r_{1}}{r_{2}}<1$):
 
 >[!def] Spherical Multipoles
->$$\frac{1}{\vert r-r^{\prime}\vert}=\frac{1}{r_{>}}\sum_{l=0}^{\infty}\left(\frac{r_{<}}{r_{>}}\right)^{l}P_{l}\left(\hat{r}\cdot\hat{r}^{\prime}\right)$$
+>$$\frac{1}{\vert r-r^{\prime}\vert}=\frac{1}{r_{>}}\sum_{l=0}^{\infty}\left(\frac{r_{<}}{r_{>}}\right)^{l}P_{l}\left(\hat{r}_{>}\cdot\hat{r}_{<}\right)$$
 >Where:
->$$\cdot\left\{{r_{>}}=\operatorname*{max}\left(r,r^{\prime}\right)\right.$$
+>$$\cdot\left\{{r_{>}}=\operatorname*{max}\left(r,r^{\prime}\right)\right\}$$
+
+^2d6d4e
 
 By [[Spherical Harmonics#^0e35b5]] :
 
 >[!thm] Equivalent definition of spherical multipole
 >$$\frac{1}{\vert r-r^{\prime}\vert}=\frac{1}{r_{>}}\sum_{l=0}^{\infty}\frac{4\pi}{2l+1}\left(\frac{r_{<}}{r_{>}}\right)^{l}\sum_{m=-l}^{l}Y_{l m}^{*}\left(\Omega_{<}\right)Y_{l m}\left(\Omega_{>}\right)$$
+
+^db1372
+
+^cf88e9
+>[!thm] Electrostatic Potential Spherical Multipole
+>$$
+>\begin{align}
+\psi(\vec{r}) & = \sum_{l=0}^\infty \sum_{m=-l}^l \frac{4\pi}{2l+1}\int \mathrm{d}^3r'\rho(\vec{r}')\left( \frac{r_{<}^l}{r_{>}^{l+1}} \right) Y_{lm}^*(\Omega_<)Y_{lm}(\Omega_{>})
+\end{align}
+>$$
+>The form of the constant $M_{lm}$ thus depends on whether $r=r_{>}$ or $r=r_{<}$
+
+^52a7e6
+
+
+
+
+
+
+
+
+
+
 
 
 # Dipole Quirks

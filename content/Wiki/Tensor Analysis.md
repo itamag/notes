@@ -21,6 +21,7 @@ $$,$$
 $$
 \epsilon^{klm}\epsilon_{k\ln} = 2\delta^m_{n}
 $$
+$$\varepsilon_{i j k}\varepsilon^{p q k}=\delta_{i}{}^{p}\delta_{j}{}^{q}-\delta_{i}{}^{q}\delta_{j}{}^{p}$$
 
 >[!thm] The product of an antisymmetric and symmetric tensors is zero
 >$$
@@ -40,3 +41,13 @@ $$
 
 ^fd1ddd
 
+>[!thm] Green's First Identity
+>$$\int_{U}\left(\psi\,\nabla\cdot{\boldsymbol{\Gamma}}+{\boldsymbol{\Gamma}}\cdot\nabla\psi\right)\,d V=\oint_{\partial U}\psi\left({\boldsymbol{\Gamma}}\cdot\mathbf{n}\right)\,d S=\oint_{\partial U}\psi{\boldsymbol{\Gamma}}\cdot d\mathbf{S}\ .$$
+>An important special case:
+>$$\int_{U}\left(\psi\,\Delta\varphi+\nabla\psi\cdot\nabla\varphi\right)\,d V=\oint_{\partial U}\psi\left(\nabla\varphi\cdot\mathbf{n}\right)\,d S=\oint_{\partial U}\psi\,\nabla\varphi\cdot d\mathbf{S}$$
+>
+
+>[!thm] Green's Second Identity:
+>$$\int_{U}\left[\psi\,\nabla\cdot(\varepsilon\,\nabla\varphi)-\varphi\,\nabla\cdot(\varepsilon\,\nabla\psi)\right]\,d V=\oint_{\partial U}\varepsilon\left(\psi{\frac{\partial\varphi}{\partial\mathbf{n}}}-\varphi{\frac{\partial\psi}{\partial\mathbf{n}}}\right)\,d S.$$
+
+^8e7ef6

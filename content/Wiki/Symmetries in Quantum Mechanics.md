@@ -25,4 +25,4 @@ $${\frac{\mathrm{d}U}{\mathrm{d}t}}={\frac{1}{i\hbar}}\left[U,H\right]=0\implies
 $${\mathcal{T}}\left(\mathbf{a}\right)=e^{-i\mathbf{p}\cdot\mathbf{a}/\hbar}:\left|\mathbf{r}+\mathbf{a}\right\rangle={\mathcal{T}}\left(\mathbf{a}\right)\left|\mathbf{r}\right\rangle,\quad{\mathcal{U}}\left(t,0\right)=e^{-i H t/\hbar}:\left|\psi\left(t\right)\right\rangle={\mathcal{U}}\left(t,0\right)\left|\psi\left(0\right)\right\rangle$$
 For example for the position translation $\cal{T}$, indeed the generator is $\mathbf{p}$, and we see:
 $$\mathcal{T}_{\epsilon}^{\dagger}x\mathcal{T}_{\epsilon} \simeq \left( 1+\frac{i\epsilon}{\hbar}G \right)x\left( 1-\frac{i\epsilon}{\hbar}G \right)\simeq x - \frac{i}{\hbar }[x,G] + O(\epsilon^2)$$
-[[Euler Rotations]]
+[[The QM Rotation Operator]]

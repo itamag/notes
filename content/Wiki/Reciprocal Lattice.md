@@ -24,6 +24,14 @@ $$
 >![[Pasted image 20241212164709.png]]
 >([pdf](zotero://open-pdf/library/items/MV5P7VMG?page=2&annotation=TMNICFUT))
 
+>[!thm] Volume of Reciprocal Lattice Primitive Unit Cell
+>For a crystal lattice of volume $V$ and $N$ primitive cells, the volume of a primitive cell in the reciprocal lattice is:
+>$$\frac{(2\pi)^3}{v} \equiv (2\pi)^3\cdot \frac{N}{V}$$
+
+^d4406d
+
+
+>
 # BRILLOUIN Zone
 
 The [[Crystal Lattice#^02fae9|Wigner-Seitz primitive cell]] of the reciprocal lattice is known as the first Brillouin zone [🔖](zotero://open-pdf/library/items/I2H7EZCQ?page=111&annotation=KBMV2YC2)

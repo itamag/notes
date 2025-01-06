@@ -8,11 +8,15 @@
 >[!def]- Primitive Vectors
 >The vectors $\mathbf{a}_{i}$ in the definition of the Baravais Lattice are called primitive vectors, and they are not unique
 
+^da77d0
+
 >[!def]- Coordination Number
 >The points in a Bravais lattice that are closest to a given point are called its nearest neighbors. Because of the periodic nature of a Bravais lattice, each point has the same number of nearest neighbors. This number is thus a property of the lattice, and is referred to as the coordination number of the lattice. A simple cubic lattice has coordination number 6; a body-centered cubic lattice, 8; and a face-centered cubic lattice, 12.
 
 >[!def]- Primitive Unit Cell
 >A volume of space that, when translated through all the vectors in a Bravais lattice, just fills all of space without either overlapping itself or leaving voids is called a primitive cell or primitive unit cell of the lattice.8 There is no unique way of choosing a primitive cell for a given Bravais lattice
+
+^40cc76
 
 While choosing the primitive cell as the parallelogram from the primitive vectors is easy and natural, this choice often does not reveal the full symmetry of the lattice. Instead we can choose:
 

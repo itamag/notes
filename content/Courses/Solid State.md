@@ -20,4 +20,17 @@ Determination of Crystal Structures by X-ray Diffraction [🔖](zotero://open-pd
 
 1. Diffraction Angle - Bragg and von Laue conditions
 2. Diffraction intensity - Bravais lattice with base
-3. 
+[[X-Ray Diffraction Off a Crystal Lattice]]
+
+# Week 7
+
+[[Electron Levels in Periodic Potential#Toy Model]]
+[[Electron Levels in Periodic Potential#^b2e546]] 
+[[Electron Levels in Periodic Potential#Kronig Penney]]
+
+[[SS HW 7]]
+
+# Week 8
+
+[[Bloch Electrons]]
+[[Electron Levels in Periodic Potential]]
