@@ -34,3 +34,6 @@ Determination of Crystal Structures by X-ray Diffraction [🔖](zotero://open-pd
 
 [[Bloch Electrons]]
 [[Electron Levels in Periodic Potential]]
+
+# Week 9
+[[Bloch Electrons#Electrons in a Weak Periodic Potential]]

@@ -69,3 +69,10 @@ ___
 - **New Questions**: (What questions remain or arise?)
 - **Connections**: (How does this relate to broader concepts?)
 ___
+
+
+
+
+# TODO
+
+- [ ] Read Stark effect [🔖](zotero://open-pdf/library/items/PMLKPKUE?page=318&annotation=HIU9SDYZ)

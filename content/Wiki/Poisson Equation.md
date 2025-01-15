@@ -2,7 +2,8 @@
 >$$\nabla^2\psi = f$$
 >If $f \equiv 0$ then the equation will be called Laplace's equation
 
-The solutions to Laplace equations are the harmonic functions, and they are unique:
+The solutions to this equation are unique, if we are given boundary conditions - information about the potential on the boundary.
+
 >[!thm] Uniqueness of Solution to Poisson Equation
 >Given boundary conditions, the solution to the Poisson equation is unique. There are two types:
 >1. Dirichlet: $psi$ is given on $\partial V$

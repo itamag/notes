@@ -69,6 +69,10 @@ In some cases, the charge/current density field will be symmetrical under some t
 
 ## Boundary Condition Problems
 
+>[!warning] 
+>In [[Maxwell Equations#Superposition Problems for Static Maxwell]], we solved the equations for entire space, assuming the fields are vanishing at infinity. In other words, we solved the equations for a specific region of space and specific boundary conditions. But what if we have a different region or boundary conditions? Then we need the following
+
+
 If we don't control the charge density, then we can't use superposition methods. In this case, for example in conducting metals, we will know the charge density or something equivalent, on the surface of the material
 
 [[Poisson Equation#Formal Solution to Poisson Eq. Using Green's Function]]

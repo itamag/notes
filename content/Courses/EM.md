@@ -4,6 +4,7 @@
 
 # Week 1
 
+
 - בקלאסית 2, בנינו את התאוריה לפי: אמפיריקה -> משוואות דינמיות -> משוואות מקסוול
 - בקורס הזה, נלך בכיוון ההפוך: לגרנז'יאן -> משוואות דינמיות -> איך פותרים אותן ואמפיריקה
 ### חזרה על אנליטית
@@ -48,6 +49,37 @@
 [[Special Relativity#Metric and Invariance]]
 כדי להבטיח את עקרון היחסות, נוכל לבחור פעולה שהיא סקלר לורנץ. הסקלר הכי מתבקש - האינטרוול/המרחק במרחב מינקובסקי!
 
+
+
+## Rec 1
+### Tensors, Differential Geometry
+
+Subscripts represent column index, superscripts represent row index. So, $a_{i}$ is a row vector, and $a^i$ is a column vector. For a matrix $M$, its entry $M_{ij} \iff M_{j}^i$ and the equation $\mathbf{y} = M \mathbf{x} \iff y^i = M^i_{j}x^j$
+
+The symbol $e$ represents a basis **matrix**, and $\hat{e}_{j}$ is a column vector of this matrix. Our rule for change of basis is: $r^i \hat{e}_{i} = {r'}^i \hat{e'}_{i} \iff \hat{e} \mathbf{r} = \hat{e'} \mathbf{r'}$. If $\mathbf{r'} = O \mathbf{r} \iff {r'}^i = O^i_{j}r^j$, then $\hat{e'} = \hat{e}O^{-1} \iff \hat{e'}^{i}_{j} =\hat{e}^i_{k}{O^{-1}}^k_{j} \iff \hat{e'}_{j} =\hat{e}_{k}{O^{-1}}^k_{j}$
+
+>[!warning] Reading and writing tensor products
+>When reading matrix products in index notation, the order of reading should be
+>$$
+>X^a_{b} \cdot Y^b_{c} \cdot Z^c_{d} \cdots
+>$$
+>![[Pasted image 20241112131455.png]]
+>$$
+{T'}^{i_{1}\dots}_{j_{1}\dots} = O^{i_{1}}_{{a_{i}}}\cdot(O^{-1})^{b_{1}}_{{j_{1}}} \cdots T^{a_{1}\dots}_{b_{1}\dots}
+$$
+
+
+
+
+
+
+>[!note]
+>In tensor analysis, we have column/contravariant/coordinate/superscript vectors and row/covariant/tangent/subscript vectors
+
+
+
+
+
 # Week 2
 ### פעולה של חלקיק טעון בשדה א"מ
 הנחות:
@@ -86,7 +118,7 @@
 		- [[Hamilton's Principle for the EM Field#^93d106]] 
 		- [[Hamilton's Principle for the EM Field#^d5e94f]] 
 	- $${\cal F}_{\mathrm{mag}}=\frac{I}{c}\int d{\boldsymbol{l}}\times{\boldsymbol{B}}=\frac{1}{c}\int{\boldsymbol{J}}\left({\boldsymbol{r}}\right)\times{\boldsymbol{B}}\left({\boldsymbol{r}}\right)d^{3}{\boldsymbol{r}}$$ 
-# Week 5 - Multipole Expansion
+# Week 6-7 - Multipole Expansion
 - [[Multipole Expansion]]
 	- [[Multipole Expansion#^facfa1]] 
 	- And more
@@ -94,39 +126,12 @@
 - ![[Spherical Harmonics#^a38af4]] 
 - 
 
-# Week 6
+# Week 8
 - [[Poisson Equation#Formal Solution to Poisson Eq. Using Green's Function]]
 - [[Conducting Metals]]
 - [[Maxwell Equations#Boundary Condition Problems]]
 - [[Method of Image Charges]]
 - [[Charge Particle with Grounded Conducting Sphere]]
 - [[Maxwell Equations#Solution to Static Maxwell's Equations for a Spherical Boundary]]
-- 
-## Rec 1
-### Tensors, Differential Geometry
 
-Subscripts represent column index, superscripts represent row index. So, $a_{i}$ is a row vector, and $a^i$ is a column vector. For a matrix $M$, its entry $M_{ij} \iff M_{j}^i$ and the equation $\mathbf{y} = M \mathbf{x} \iff y^i = M^i_{j}x^j$
-
-The symbol $e$ represents a basis **matrix**, and $\hat{e}_{j}$ is a column vector of this matrix. Our rule for change of basis is: $r^i \hat{e}_{i} = {r'}^i \hat{e'}_{i} \iff \hat{e} \mathbf{r} = \hat{e'} \mathbf{r'}$. If $\mathbf{r'} = O \mathbf{r} \iff {r'}^i = O^i_{j}r^j$, then $\hat{e'} = \hat{e}O^{-1} \iff \hat{e'}^{i}_{j} =\hat{e}^i_{k}{O^{-1}}^k_{j} \iff \hat{e'}_{j} =\hat{e}_{k}{O^{-1}}^k_{j}$
-
->[!warning] Reading and writing tensor products
->When reading matrix products in index notation, the order of reading should be
->$$
->X^a_{b} \cdot Y^b_{c} \cdot Z^c_{d} \cdots
->$$
->![[Pasted image 20241112131455.png]]
->$$
-{T'}^{i_{1}\dots}_{j_{1}\dots} = O^{i_{1}}_{{a_{i}}}\cdot(O^{-1})^{b_{1}}_{{j_{1}}} \cdots T^{a_{1}\dots}_{b_{1}\dots}
-$$
-
-
-
-
-
-
->[!note]
->In tensor analysis, we have column/contravariant/coordinate/superscript vectors and row/covariant/tangent/subscript vectors
-
-
-
-# 
+# Week 9 - Dielectric & Magnetic Materials

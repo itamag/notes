@@ -115,32 +115,42 @@ Now, let's look at the row $\mathbf{k_{0}}$ in the above expression. If $\lvert 
 $$[\mathcal{U^{(1)}}v]_{\mathbf{k_{0}}} = \mathcal{U}_{\mathbf{k_{0},k_{0}}}v_{\mathbf{k_{0}}} = \bra{\mathbf{0}} \ket{U} \cdot v_{\mathbf{k_{0}}} = 0  $$
 Without loss of generality assuming $\bra{\mathbf{0}}\ket{U}=0$. In words, in the case that the kinetic energy is not unique, the correction is linear whereas if it is unique, the correction is of order $U^2$.
 
+# Hindsight
+Take the Hamiltonian $$H = \underbrace{ \frac{\mathbf{p}^2}{2m} }_{ H_{0} } + V,\;\;\;V(\mathbf{r+R}) = V(\mathbf{r})$$Where $\mathbf{R}$ is the crystal (direct) lattice. Denote by $\ket{\mathbf{k}}$ the energy-eigenstates of the "free" Hamiltonian $H_{0}$. We'd like to approximate the energy levels of $H$, based on the known eigenbasis $\ket{\mathbf{k}}$ of $H_{0}$. 
+
+Assuming a sufficiently weak potential and $\tilde{V}(\mathbf{0}) = 0$ ^[which is just a convenience and legit because we're just adding a constant to the potential $V$]:
+$$\epsilon({\bf k})\approx\epsilon_{0}({\bf k})+{\sum_{\substack{{\bf k}^{\prime}={\bf k}+{\bf G}\\\mathbf{G}\neq \mathbf{0}}}}\quad\frac{|\langle{\bf k}^{\prime}|V|{\bf k}\rangle|^{2}}{\epsilon_{0}({\bf k})-\epsilon_{0}({\bf k}^{\prime})}$$
+Fix $\mathbf{k}$. If for all $\mathbf{k'}=\mathbf{k+G}$ we have:
+$$\begin{align}
+\lvert \epsilon_{0}(\mathbf{k}) - \epsilon_{0}(\mathbf{k'}) \rvert  \gg \tilde{V}(\mathbf{k-k'}) ^2 \\
+\end{align}$$
+^cc95ac
+
+Then we'll *declare* (not necessarily justified) $\epsilon(\mathbf{k})\approx\epsilon(\mathbf{k}')$. Otherwise, we'll say that there is a *near-degeneracy of the free-energies, which has two effects. Firstly, the energies associated with $\ket{\mathbf{k}}, \ket{\mathbf{k'}}$ will change to, say, $\epsilon_{\pm}$. Secondly, they are no longer states with definite energy. In fact, they will be independent linear combinations of the new eigenstates corresponding to $\epsilon_{\pm}$*.
+
+Indeed, by adding the perturbation $V$, we are in a sense *mixing the $\ket{\mathbf{k}}$ states separated by the reciprocal lattice $\mathbf{G}$*:  if $\ket{\mathbf{k'}} = \ket{\mathbf{k+G}}$, there will be a non-zero probability of measuring for state $\ket{\mathbf{k}}$ the energy of state $\ket{\mathbf{k'}}$:
+$$\begin{align}
+\langle{\bf k}^{\prime}|H|{\bf k}\rangle  & = \epsilon_{0}(\mathbf{k})\delta_{\mathbf{k',k}}+\langle{\bf k}^{\prime}|V|{\bf k}\rangle \\
+ & =\epsilon_{0}(\mathbf{k})\delta_{\mathbf{k',k}}+\frac{1}{L^{3}}\int{\bf d r}\,e^{i({\bf k}-{\bf k}^{\prime})\cdot{\bf r}}\;V({\bf r}) \\
+ & = \epsilon_{0}(\mathbf{k})\delta_{\mathbf{k',k}} + \mathcal{F}[V](\mathbf{k-k'})  \\
+ & \equiv\epsilon_{0}(\mathbf{k})\delta_{\mathbf{k',k}} +  \tilde{V}(\mathbf{k-k'})
+\end{align}$$
+
+*Physically we explain these mathematical statements as: any plane-wave state k can principally scatter into another plane-wave state k′ only if these two plane waves are separated by a reciprocal lattice vector. For this effect to be noticeable, the difference between their free-energies should be small enough wrt the potential, i.e. the states are nearly-degenerate* (i.e. the negation of [[#^cc95ac]]) .
+
+We can partition the possible wave-vectors $\mathbf{k}$ into sets with nearly identical free-energies (there's a gotcha here regarding continuity which everyone will ignore). For starters, *the Brillouin zone boundaries are always exactly degenerate, if $\epsilon_{0}(\mathbf{k}) \equiv \epsilon_{0}(k)$*: for each point $\mathbf{k}$ on the boundary of a Brillouin zone, there exists $\mathbf{k'}$ also on the boundary of the same zone, such that $\epsilon_{0}(\mathbf{k}) = \epsilon_{0}(\mathbf{k'})$[^2]. Moreover, as we are nearing the zone boundaries[^3], we will have near-degeneracy:
+![[Pasted image 20250113184951.png|300]] ![[Pasted image 20250113185116.png|300]]
+
+As seen by the plots, we're looking for $\mathbf{k,k'}$ *exactly* $\mathbf{G}$ apart with *approximately* identical free-energy levels. The principles of the nearly free electron model are quite similar in two and three dimensions. In short, near the Brillouin zone boundary, a gap opens up due to scattering by a reciprocal lattice vector. States of energy slightly higher than the zone boundary intersection point are pushed up in energy, whereas states of energy slightly lower than the zone boundary intersection point are pushed down in energy. *The main difference in higher dimensions is that there will generally be more than 2 co-degenerate states*. One example of when this occurs is the two-dimensional square lattice, where the four points (±π/a, ±π/a) all have the same unperturbed energy and are all separated from each other by reciprocal lattice vectors.
+
+Starting from these results of perturbation theory and a weak periodic potential, we can generalize to any periodic potential (with periodicity $\mathbf{R}$). This is Bloch's theorem:
+>[!thm] Bloch's Theorem
+>An electron in a periodic potential has eigenstates of the form:
+>$$\Psi_{\bf k}^{\alpha}({\bf r})=e^{i{\bf k\cdot r}}u_{\bf k}^{\alpha}({\bf r})$$
+>Where each $u_{\mathbf{k}}^\alpha$is periodic in the unit cell and k (the crystal momentum) can be chosen within the first Brillouin zone. Because u is periodic, it can be rewritten as a sum over reciprocal lattice vectors and hence:
+>$$\Psi_{\bf k}^{\alpha}({\bf r})=\sum_{{\bf G}}{\tilde{u}}_{{\bf G},{\bf k}}^{\alpha}\ e^{i({\bf G}+{\bf k})\cdot{\bf r}}\ .$$
+>*Thus an equivalent statement of Bloch’s theorem is that we can write each eigenstate as being made up of a sum of plane-wave states k which differ by reciprocal lattice vectors G, which is exactly what we showed in the case of a weak potential.*
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-If there exists a subset $S \subset \mathbf{G}$ such that:
-$$\begin{gathered}
-i,j \in S \implies D \sim \mathcal{U} \\
-i,j \not\in S \implies D \gg \mathcal{U}
-\end{gathered}$$
-Then we can set:
-$$\mathcal{U} = \mathcal{U}\cdot \mathbb{1}_{S} + \mathcal{U} \cdot \mathbb{1}_{S^c} \equiv \mathcal{U}_{1} + \mathcal{U}_{2}$$
-And it follows:
-$$D^{-1}\mathcal{U} \approx D^{-1}\mathcal{U}_{1}$$
-$$\tilde{\psi} = D^{-1}\mathcal{U}_{1} \tilde{\psi} + O(U^2)$$
-Hence:
-$$D \tilde{\psi} = \mathcal{U} \; \tilde{\psi} = (\mathcal{U}_{1} + \mathcal{U}_{2}D^{-1}\mathcal{U}_{1})\tilde{\psi} + O(U^3)$$
-In our case, we will choose $\varepsilon = \mathcal{E}_{\mathbf{k}_{0}}$ for some $\mathbf{k}_{0}$. Thus, $(\mathbf{k}_{0}, \mathbf{k}_{0}) \in S$. Wlog we can assume $\bra{\mathbf{0}}\ket{U}=0$ and hence $[\mathcal{U}_{1}]_{\mathbf{k}_{0}, \mathbf{k}_{0}}= 0$. If this is the only item in $S$ we get:
-
-$$D \tilde{\psi} = \mathcal{U} \; \tilde{\psi} = \mathcal{U}_{2}D^{-1}\mathcal{U}_{1}\tilde{\psi} + O(U^3)$$
+[^2]: To see this generally, recall that a Brillouin zone boundary is a perpendicular bisector of the segment between 0 and some G. We can write the given point k = G/2 + k⊥ where k⊥ · G = 0.  Then if we construct the point k′ = −G/2 + k⊥, then clearly the second condition is satisfied, and k′ is an element of the perpendicular bisector of the segment between 0 and −G and therefore is on a zone boundary, and |k| = |k′|
+[^3]: Assuming everything is sufficiently smooth, as we always do
