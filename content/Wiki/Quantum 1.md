@@ -5,3 +5,4 @@
 [[Schordinger's Equation#Exact Solutions]]
 [[The Hydrogen Atom Model]]
 [[Heisenberg Image]]
+[[QM Probability Current]]

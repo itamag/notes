@@ -8,9 +8,9 @@ Idea: To understand electrons in matter, we'll depict the atoms as a [[Crystal L
 # Toy Model
 To get going, we'll use the physical assumptions:
 1. 1: The atoms form a [[Crystal Lattice]]
-3. Each atom has just one orbital.
-4. The atoms (i.e. lattice points) are far enough from one another such that the orbital of different atoms don't overlap and it's clear where the electron is on the lattice.
-5. The potential of each atom can only move an electron from a site to its neighbors.
+2. Each atom has just one orbital.
+3. The atoms (i.e. lattice points) are far enough from one another such that the orbital of different atoms don't overlap and it's clear where the electron is on the lattice.
+4. The potential of each atom can only move an electron from a site to its neighbors.
 
 
 Which gives the mathematical equivalents:
@@ -18,7 +18,7 @@ Which gives the mathematical equivalents:
 2. For each atom/site, there is just one eigenstate (of the Hamiltonian). $$H_{m}\ket{m} = \varepsilon_{\alpha} \ket{m} $$
 	And $\varepsilon_{\alpha}$ is the energy **of the atom**.
 3. For atoms/sites $n,m$ of the lattice, the eigenfunctions are orthogonal $$\bra{m}\ket{n} = \delta_{mn} {}$$
-2. If $H = K + \sum_{j \in \text{lattice}}V_{j}$ then $$\bra{n}V_{j}\ket{m} = V_{0}\delta_{nm} -t \delta_{n,m\pm 1}$$
+4. If $H = K + \sum_{j \in \text{lattice}}V_{j}$ then $$\bra{n}V_{j}\ket{m} = V_{0}\delta_{nm} -t \delta_{n,m\pm 1}$$
 From here we develop:
 1. Compute $\bra{n}H\ket{m}$ and $\implies$ Hamiltonian eigenstates are linear combinations of the $\ket{n}$ states $\psi = \sum_{n}A_{n}\ket{n}$
 2. Periodic boundary condition $\implies$ $A_{n} = \frac{1}{\sqrt{ N }}e^{ikna}$, **where $N$ is the number of electrons in the region of space where we solve the problem**

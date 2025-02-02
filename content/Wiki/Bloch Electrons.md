@@ -4,6 +4,8 @@
 >Are known as Bloch electrons 
 >(Ashcroft and Mermin, 1976, p. 133)  [🔖](zotero://open-pdf/library/items/I2H7EZCQ?page=155&annotation=US3KW46R)
 
+^9dd1a2
+
 >[!thm] Bloch's Theorem and the Crystal Momentum
 >The eigenstates $psi$ of the one-electron Hamiltonian  $H=-{\frac{\hbar^{2}}{2m}}\nabla^{2}\,+\,U({\bf r})$ where $U(r + R) = U(r)$ for all R in a Bravais lattice, can be chosen to have the form of a plane wave times a function with the periodicity of the Bravais lattice:
 >$$\psi_{n\mathbf{k}}(\mathbf{r})\,=\,e^{i\mathbf{k}\,\cdot\,\mathbf{r}}u_{n\mathbf{k}}(\mathbf{r}) = e^{i\mathbf{k}\,\cdot\,\mathbf{r}}u_{n\mathbf{k}}(\mathbf{r}+\mathbf{R})$$
@@ -150,6 +152,13 @@ Starting from these results of perturbation theory and a weak periodic potential
 >Where each $u_{\mathbf{k}}^\alpha$is periodic in the unit cell and k (the crystal momentum) can be chosen within the first Brillouin zone. Because u is periodic, it can be rewritten as a sum over reciprocal lattice vectors and hence:
 >$$\Psi_{\bf k}^{\alpha}({\bf r})=\sum_{{\bf G}}{\tilde{u}}_{{\bf G},{\bf k}}^{\alpha}\ e^{i({\bf G}+{\bf k})\cdot{\bf r}}\ .$$
 >*Thus an equivalent statement of Bloch’s theorem is that we can write each eigenstate as being made up of a sum of plane-wave states k which differ by reciprocal lattice vectors G, which is exactly what we showed in the case of a weak potential.*
+
+^62cd65
+
+
+>[!remark]
+>If we don't have an infinite lattice but rather a finite collection of unit cells, then we would have quantization of the crystal momenta within the unit cell as per [[#Allowed Crystal Momentum Values]]
+
 
 
 [^2]: To see this generally, recall that a Brillouin zone boundary is a perpendicular bisector of the segment between 0 and some G. We can write the given point k = G/2 + k⊥ where k⊥ · G = 0.  Then if we construct the point k′ = −G/2 + k⊥, then clearly the second condition is satisfied, and k′ is an element of the perpendicular bisector of the segment between 0 and −G and therefore is on a zone boundary, and |k| = |k′|

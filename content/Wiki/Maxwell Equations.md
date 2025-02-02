@@ -1,5 +1,5 @@
 >[!def] Maxwell's Equations
->$$\begin{array}{r l}{\nabla\cdot\mathbf{E}}&{={4\pi \rho}}\\ {\nabla\cdot\mathbf{B}}&{=0}\\ {\nabla\times\mathbf{E}}&{=-{\cfrac{\partial\mathbf{B}}{\partial t}}}\\ {\nabla\times\mathbf{B}}&{=\mathbf{\frac{4\pi}{c}J}+\frac{1}{c}{\cfrac{\partial\mathbf{E}}{\partial t}}}\end{array}$$
+>$$\begin{array}{r l}{\nabla\cdot\mathbf{E}}&{={4\pi \rho}}\\ {\nabla\cdot\mathbf{B}}&{=0}\\ {\nabla\times\mathbf{E}}&{=-\frac{1}{c}{\cfrac{\partial\mathbf{B}}{\partial t}}}\\ {\nabla\times\mathbf{B}}&{=\mathbf{\frac{4\pi}{c}J}+\frac{1}{c}{\cfrac{\partial\mathbf{E}}{\partial t}}}\end{array}$$
 >The equations aren't independent - 8 equations for 6 field components. Noticing that  [[Tensor Analysis#^a2c75f]], we can see how the first two equations are derived from the (2/8) are derived from the latter 2 (6/8)
 
 # Maxwell's Static Equations
@@ -88,3 +88,62 @@ $$\varphi\left({\boldsymbol{r}}\right)=\int_{V}\rho\left({\boldsymbol{r}}^{\prim
 Where $\rho$ is the charge density inside the region (not related to the boundary).
 
 ### Neumann Boundary Problems for Static Maxwell
+
+
+
+# Maxwell's Dynamic Equations
+>[!note]
+>Maxwell's general equations are first-order homogenous vector differential equations. The coupling of the vector components of the EM fields is rather annoying, so usually we go about by expressing the fields as potential-derivatives, then solving second-order uncoupled equations:
+>$$\nabla \cdot \mathbf{B} = 0 \implies \mathbf{B} = \nabla \times \mathbf{A}$$
+>$$\implies 0 = \nabla \times \mathbf{E} + \frac{1}{c} \frac{ \partial \mathbf{B} }{ \partial t } = \nabla \times \left( \mathbf{E}+ \frac{1}{c}\frac{ \partial \mathbf{A} }{ \partial t } \right) \implies \mathbf{E} + \frac{1}{c}\frac{ \partial \mathbf{A} }{ \partial t } = -\nabla \psi $$
+
+## Turning Maxwell's Equations into Potential Wave Equations
+
+To solve the equations, we again see that the off-diagonal equations still allow us to replace the first-order problem with a second order, as we define: $$\mathbf{E} = -\nabla \phi_{E} - \frac{1}{c}\frac{ \partial \mathbf{A} }{ \partial t } ;\;\;\;\mathbf{B} = \nabla \times \mathbf{A}$$
+Which yields *the dynamical potential equations*:
+
+>[!thm] Maxwell Equations - Potential Form
+> $$\begin{gather}
+> \nabla^2\varphi + \frac{1}{c}\frac{ \partial  }{ \partial t } (\nabla \cdot \mathbf{A}) = -4\pi \rho\\
+> \nabla^2\mathbf{A} - \frac{1}{c}\frac{ \partial^2 \mathbf{A} }{ \partial t^2 } - \nabla\left(\nabla \cdot \mathbf{A} + \frac{1}{c}\frac{ \partial \varphi }{ \partial t } \right) = -\frac{4\pi}{c} \mathbf{J}
+> \end{gather}$$
+> The potentials are not unique, so we can choose them to make these equations more pleasant. In *Lorentz gauge*:
+> $$\nabla \cdot \mathbf{A} + \frac{1}{c}\frac{ \partial \varphi }{ \partial t } =0 \implies \begin{bmatrix}
+> \nabla^2\varphi - \frac{1}{c^2}\frac{ \partial ^2\varphi }{ \partial t^2 } = -4\pi \rho \\
+> \nabla^2\mathbf{A} - \frac{1}{c^2}\frac{ \partial ^2\mathbf{A} }{ \partial t^2 } = -\frac{4\pi}{c}\mathbf{J}
+> \end{bmatrix} \iff \partial_{\nu}F^{\nu \mu} = \frac{4\pi}{c}J^\mu$$
+> In *Colon gauge*:
+> $$\nabla \cdot \mathbf{A}=0 \implies \begin{bmatrix}
+> \nabla^2\varphi = -4\pi \rho \\
+> \nabla^2 \mathbf{A} - \frac{1}{c}\frac{ \partial ^2\mathbf{A} }{ \partial t^2 }  = -\frac{4\pi}{c}\left( \underbrace{ \mathbf{J}-\frac{1}{4\pi}\nabla \frac{ \partial \varphi }{ \partial t } }_{ \mathbf{J}_{\text{transverse}} }  \right)
+> \end{bmatrix}$$
+> [[Covariant Formulation of EM#^e46cdb]] 
+> [[Covariant Formulation of EM#^75e5b1]] 
+
+
+## Solving the Wave Equations using Green's Functions
+
+*In both gauges, we see that the potentials are determined by independent inhomogeneous wave equations*. Now's a good time to find a [[Green's Function]] for such equations. We get *two possible Green's functions*:
+![[Green's Function#^011885]] 
+
+Basically, we get the same Green's functions as [[Poisson Equation#^d8bb11]], but now at each point in space, the potential will be a superposition of the charge distributions at different moments in time. *Obviously if we expect causality, i.e. the potential at a point is affected by the past charge distribution and not the future one, we will use $G^{+}$*.
+
+## Retarded Time
+So generally we have a causality relation: an observer at $\mathbf{r},t$ will be affected by an event at $\mathbf{r'},t'$ traveling at the speed of light if: $$\lVert \mathbf{r-r'} \rVert = c(t-t') $$
+Given a choice of $\mathbf{r'}$, a solution $t'$ to the above equation will be called the retarded time $t_{R}$. Intuitively, a test charge at point $\mathbf{r}, t$ will feel the effect of the charge at $\mathbf{r'}$ at time $t_{R}(\mathbf{r'})$. *When we have a function $f(\mathbf{r'},t')$ and we want to compute it at the retarded time $t'=t_{R}$, it is commonplace to denote*:
+$$[f]_{\mathbf{r},t}(\mathbf{r'}) = f(\mathbf{r'}, t_{R}) \equiv f\left( \mathbf{r'},t -\frac{\lVert\mathbf{r'-r}\rVert}{c}  \right)$$
+*Essentially, the brackets parameterize a function $f(\mathbf{r'},t')$ of the sender frame in the mixed frame $\mathbf{r'},\mathbf{r},t$ derived from $\mathbf{r'},t'(\mathbf{r'};\mathbf{r},t)$*. So we have two parameters $\mathbf{r},t$ which denote the observer location, and $[f]$ is a function only of space $\mathbf{r'}$.
+
+Alternatively, we can fix a time $t'$ in the equation and then ask: what are the solutions $\mathbf{r'}$? These are the points in space where an event at $t'$ contributes to an observer at $\mathbf{r},t$
+
+# Conservation Laws
+>[!thm] Charge Conservation is a Consequence of Maxwell's Equation:
+>Indeed, local charge conservation can be derived from the differential equations:
+>$$\begin{align}
+0  & = \nabla \cdot(\nabla \times \mathbf{B}) = \nabla \cdot\left( \frac{4\pi}{c}\mathbf{J}+\frac{1}{c} \frac{ \partial \mathbf{E} }{ \partial t } \right) \\
+ & \implies \nabla \cdot \mathbf{J} + \partial_{t}\rho = 0
+\end{align}$$ 
+> And then the global conservation by integration:
+> $$\dot{Q} = \frac{d}{dt}\int d^3\mathbf{r'}\rho(\mathbf{r'},t) = -\int d^3\mathbf{r'}\nabla \cdot \mathbf{J} = 0$$
+
+^9ec328
