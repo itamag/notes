@@ -37,3 +37,9 @@ Determination of Crystal Structures by X-ray Diffraction [🔖](zotero://open-pd
 
 # Week 9
 [[Bloch Electrons#Electrons in a Weak Periodic Potential]]
+[[Tight Binding Model]]
+
+# Week 10
+[[Tight Binding Model#Multiple Orbitals]]
+
+

@@ -122,7 +122,7 @@ $$
 - [[Multipole Expansion]]
 	- [[Multipole Expansion#^facfa1]] 
 	- And more
-- [[Electrostatic Energy#Under external field]]
+- [[Energy Stored in EM Field#Under external field]]
 - ![[Spherical Harmonics#^a38af4]] 
 - 
 
@@ -135,3 +135,14 @@ $$
 - [[Maxwell Equations#Solution to Static Maxwell's Equations for a Spherical Boundary]]
 
 # Week 9 - Dielectric & Magnetic Materials
+[[Electrostatics in Dielectric Materials]]
+
+# Week 10 - Dynamics
+[[Maxwell Equations#Maxwell's Dynamic Equations]]
+	[[Retarded Time]]
+	[[Green's Function#^011885]] 
+[[Lienard-Wiechert Potentials]]
+[[Energy Stored in EM Field#Energy of General EM Field]]
+
+# Week 11
+[[Conservation Laws in Electromagnetism]]

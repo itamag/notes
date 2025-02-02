@@ -1,3 +1,6 @@
+>[!note] MIT Course Link
+>[here](https://ocw.mit.edu/courses/8-06-quantum-physics-iii-spring-2018/)
+
 # Week 1
 
 ![[Quantum 1#A Short Recap]]
@@ -27,4 +30,10 @@
 # Week 10
 [[Perturbation Theory#Time-Dependent Perturbation Theory in QM]]
 [[Quantum Dynamical Pictures#The Interaction Picture]]
+[[Applied Models using Time-Dependent Perturbation Theory]]
 
+# Week 11
+[[Scattering and Born Approximation]]
+
+# Week 12
+[[Scattering and Born Approximation#Partial Waves and Phase Shifts]]
